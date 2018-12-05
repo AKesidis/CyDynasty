@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title >Title</title><link rel="icon"href="background.jpg">
-    <link rel="Stylesheet2"type="text/css"href="Stylesheet2.css">
-
-    <script src="TH-api.js"></script>
+    <title >Choose TH</title>
+    <link rel="icon "href="background.jpg">
+    <link rel="Stylesheet"type="text/css "href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body onload="getChallenges()">
-
+<button onclick="window.location.href='ChooseTH.html'">RESTART</button>
+<form id=challengesForm action="Questions.html">
+    <h3>Player Name</h3>
+    <label for="PlayerName"></label><input type="text" name="player" id="PlayerName"><br>
     <ul id="Challenges">
 
     </ul>
 
+</form>
+<br>
+<br>
+<img src="logo.png" alt="logo">
+
+<script src="TH-api.js"></script>
 </body>
 </html>

@@ -1,0 +1,100 @@
+
+html
+{
+    background: url(background.png) no-repeat center center fixed; /*Set the image as background*/
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    font-family: Papyrus, fantasy;
+
+}
+
+h1
+{
+    text-decoration: underline;
+    color: white;
+    text-shadow: 2px 2px darkred;
+    font-family: Papyrus, fantasy;
+}
+h3
+{
+    text-decoration: underline;
+    color: white;
+    text-shadow: 2px 2px darkred;
+    font-family: Papyrus, fantasy;
+}
+.LandingP
+{
+    border: solid darkred 2px;
+    background-color: white;
+    padding: 5px;
+    width: 60%;
+    transform: translate(30%, 0%);
+    font-family: Papyrus, fantasy;
+}
+
+img { /* All the images including the logo images, images on home page and images that i have use as titles */
+    padding: 1px;
+    border: 2px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.QR{
+    padding: 1px;
+    border: 2px;
+    width: 30%;
+    height: auto;
+    margin: auto;
+}
+#content{
+    font-size: 50px;
+
+    margin:auto;
+}
+button{
+    color:white;
+    text-shadow:2px 2px darkred;
+    border:solid black 2px;
+    background-color: darkred;
+    font-family: Papyrus, fantasy;
+
+}
+#Back{
+    color:white;
+    text-shadow:2px 2px darkred;
+    border:solid black 2px;
+    background-color: darkred;
+    font-family: Papyrus, fantasy;
+    width:40%;
+    margin:auto;
+    height:auto;
+    font-size:50px;
+}
+#preview{
+    border:solid darkred 5px;
+    width:100%;
+    height:auto;
+    margin:auto;
+}
+ul
+{
+    text-align: left;
+    color:white;
+    text-shadow:2px 2px black;
+    border:solid black 2px;
+    font-family: Papyrus, fantasy;
+}
+input{
+    color:white;
+    text-shadow:2px 2px darkred;
+    border:solid black 2px;
+    background-color: darkred;
+    font-family: Papyrus, fantasy;
+}
+p{
+    color:white;
+    text-shadow:2px 2px darkred;
+    font-family: Papyrus, fantasy;
+
+}

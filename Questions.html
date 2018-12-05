@@ -2,10 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="Stylesheet2"type="text/css"href="Stylesheet2.css">
-</head>
-<body onload="start()">
+    <title>Questions</title>
+    <link rel="Stylesheet"type="text/css"href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+</head>
+<body onload="question()">
+<button onclick="window.location.href='ChooseTH.html'">RESTART</button>
+
+<p id="question"></p>
+<p id="answer">
+
+</p>
+<p id="score">
+
+</p>
+<br>
+<br>
+<img src="logo.png" alt="logo">
+<br>
+<img class="QR" src="QR.png" onclick="window.location.href='reader.html'">
+
+<script src="TH-api.js"></script>
 </body>
 </html>
