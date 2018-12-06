@@ -40,6 +40,8 @@ img { /* All the images including the logo images, images on home page and image
     height: auto;
     margin: auto;
 }
+
+
 .QR{
     padding: 1px;
     border: 2px;
@@ -79,11 +81,13 @@ button{
 }
 ul
 {
+    background-color: darkred;
     text-align: left;
     color:white;
     text-shadow:2px 2px black;
-    border:solid black 2px;
+    border:solid black 5px;
     font-family: Papyrus, fantasy;
+
 }
 input{
     color:white;
@@ -96,5 +100,15 @@ p{
     color:white;
     text-shadow:2px 2px darkred;
     font-family: Papyrus, fantasy;
+
+}
+.facebook{
+    padding: 1px;
+    border: 2px;
+    width: 30%;
+    height: auto;
+    margin: auto;
+
+
 
 }

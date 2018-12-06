@@ -105,6 +105,9 @@ function skip() {
     var sReq = new XMLHttpRequest();
     sReq.onreadystatechange = function (){
         if (this.readyState === 4 && this.status === 200) {
+         confirm("Are you sure you want to skip this question?" +
+              "" +
+             "This will result to loss of points!");
             loadQuestion();
         }
     };
