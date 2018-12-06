@@ -56,7 +56,10 @@ function question(){
         loadQuestion();
     }
 }
+function info(){
+    alert("Our team consists of Andreas Kesidis,Giannis Toumazou,Nicole Demetriou - view my homepage at http://akesidis.github.io!!!"+" "+"Andreas Kesidis @ http://akesidis.github.io");
 
+}
 function loadQuestion() {
     score();
     var qReq = new XMLHttpRequest();
@@ -105,10 +108,12 @@ function skip() {
     var sReq = new XMLHttpRequest();
     sReq.onreadystatechange = function (){
         if (this.readyState === 4 && this.status === 200) {
-         confirm("Are you sure you want to skip this question?" +
+       if(confirm("Are you sure you want to skip this question?" +
               "" +
-             "This will result to loss of points!");
+             "This will result to loss of points!")){
             loadQuestion();
+       }
+       else{}
         }
     };
     sReq.open("GET","https://codecyprus.org/th/api/skip?session="+fromCookie("session"));
@@ -155,9 +160,19 @@ function fromCookie(property) {
         if (property===key) return val;
     }
 }
-
+function isTest() {
+    let url = new URL(window.location.href);
+    return url.searchParams.get("test") != null;
+}
 function leaderBoard() {
     var lReq = new XMLHttpRequest();
+    let url;
+    if(isTest())
+    {
+        url = "https://codecyprus.org/th/test-api/";
+    }else {
+        url = "https://codecyprus.org/th/api/";
+    }
     lReq.onreadystatechange = function(){
         if (this.readyState === 4 && this.status === 200) {
             var obj = JSON.parse(this.responseText);
@@ -172,7 +187,8 @@ function leaderBoard() {
             }
         }
     };
-    lReq.open("GET", "https://codecyprus.org/th/api/leaderboard?session=" + fromCookie("session") + "&limit=20&sorted", true);
+    console.log(fromCookie("session"));
+    lReq.open("GET", url+"leaderboard?session=" + fromCookie("session") + "&limit=20&sorted", true);
     lReq.send();
 }
 
@@ -215,7 +231,7 @@ function sendLocation(latitude,longitude) {
         }
     };
     xhttp.open("GET", "https://codecyprus.org/th/api/location?" +
-        "session=" + cookie("session") + "&latitude=" + latitude + "&longitude=" + longitude, true);
+        "session=" + fromCookie("session") + "&latitude=" + latitude + "&longitude=" + longitude, true);
     xhttp.send();
 }
 getLocation();
